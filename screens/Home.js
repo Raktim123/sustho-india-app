@@ -1,52 +1,52 @@
 import { Button } from '@rneui/base';
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Home = () => {
     return (
-        <View style={styles.container}>
-            <View style={styles.headerBackgroundColor}>
-                <Text>JKdbqs</Text>
-            </View>
-
-            <View style={styles.sectionContainer}>
-                <View style={styles.section}>
-                    <Text style={styles.title}>Hospitals</Text>
-                    <Image source={require('../assets/doctor.png')} style={{ width: "100%", resizeMode: "contain"}} />
+        <SafeAreaView style={styles.container}>
+            <ScrollView>
+                <View style={styles.headerBackgroundColor}>
+                    <Text>JKdbqs</Text>
                 </View>
 
-                <View style={styles.section}>
-                    <Text style={styles.title}>Medical Tour</Text>
-                    <Image source={require('../assets/Group 11012.png')} style={{ width: "100%", resizeMode: "contain" }} />
-                </View>
+                <View style={styles.sectionContainer}>
+                    <View style={styles.section}>
+                        <Text style={styles.title}>Hospitals</Text>
+                        <Image source={require('../assets/doctor.png')} style={{ width: "100%", resizeMode: "contain"}} />
+                    </View>
 
+                    <View style={styles.section}>
+                        <Text style={styles.title}>Medical Tour</Text>
+                        <Image source={require('../assets/Group 11012.png')} style={{ width: "100%", resizeMode: "contain" }} />
+                    </View>
 
-                <View style={styles.section}>
-                    <Text style={styles.title}>Medical Tour</Text>
-                    
-                    <View style={{flexDirection: 'row'}}>
-                        <View style={{flexDirection: 'column', alignItems: 'center', width: "50%"}}>
-                            <Image source={require('../assets/online-doctor 1.png')} style={{ width: "100%", resizeMode: "contain" }} />
-                        </View>
-                        <View style={{ flexDirection: 'column', justifyContent: "space-between", width: "50%" }}>
-                            <View>
-                                <Text style={styles.title}>Connect us for free Consultation.</Text>
-                                <Text>Specialist Cardiologist </Text>
+                    <View style={styles.section}>
+                        <Text style={styles.title}>Medical Tour</Text>
+                        
+                        <View style={{flexDirection: 'row'}}>
+                            <View style={{flexDirection: 'column', alignItems: 'center', width: "50%"}}>
+                                <Image source={require('../assets/online-doctor 1.png')} style={{ width: "100%", resizeMode: "contain" }} />
                             </View>
-                            <Button buttonStyle={{backgroundColor: "#0EBE7F", padding: 15, borderRadius: 4}} containerStyle={{marginTop: 15}}>Click Here</Button>
+                            <View style={{ flexDirection: 'column', justifyContent: "space-between", width: "50%" }}>
+                                <View>
+                                    <Text style={styles.title}>Connect us for free Consultation.</Text>
+                                    <Text>Specialist Cardiologist </Text>
+                                </View>
+                                <Button buttonStyle={{backgroundColor: "#0EBE7F", padding: 15, borderRadius: 4}} containerStyle={{marginTop: 15}}>Click Here</Button>
+                            </View>
                         </View>
                     </View>
                 </View>
-            </View>
-            
-        </View>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        
     },
     headerBackgroundColor: {
         flex: 0.2,
