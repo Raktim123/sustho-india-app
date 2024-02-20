@@ -49,7 +49,7 @@ export default function App() {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <SafeAreaProvider>
         <AppTab />
-        <Button onPress={handlePresentModalPress}>Press</Button>
+        {/* <Button onPress={handlePresentModalPress}>Press</Button>
         <BottomSheetModalProvider>
           <BottomSheetModal
               ref={bottomSheetModalRef}
@@ -59,11 +59,8 @@ export default function App() {
               backdropComponent={renderBackdrop}
               
           >
-              {/* <Login /> */}
-
-              <Verification />
           </BottomSheetModal>
-        </BottomSheetModalProvider>
+        </BottomSheetModalProvider> */}
         </SafeAreaProvider>
       </GestureHandlerRootView>
     </NavigationContainer>
